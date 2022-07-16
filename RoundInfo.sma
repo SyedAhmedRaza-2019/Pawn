@@ -82,5 +82,3 @@ stock ChatColor(const id, const input[], any:...) {
 		}
 	}
 }
-
-
