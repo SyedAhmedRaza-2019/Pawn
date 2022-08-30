@@ -30,7 +30,10 @@ public ct_score()
 }
 public round_start() 
 { 
+    
+    
     new mapname[32], nextmap[32], players[32], player ,maxrundi, maxplayers,maxroundsCvar;
+    
     maxrundi=get_cvar_num("mp_maxrounds");
     maxplayers=get_maxplayers();
     get_cvar_string("amx_nextmap",nextmap,31); 
@@ -39,11 +42,11 @@ public round_start()
     maxroundsCvar=get_map_maxrounds(mapname);
     if (maxroundsCvar==0)
     {
-    	client_print_color(0,print_team_default,"^4[%s]^3 Rounds:^4 %d^3/^4%d ^1|^3 Score:^3 Ts:^4%i^3 -^3 CTs:^4%i ^1|^3 Map:^4 %s^3/^4%s [No Round Limit] ^1|^3 Players:^4 %d^3/^4%d",prefix, runde,maxrundi,TerrScore,CTScore,mapname, nextmap, player,maxplayers);
+    	client_print_color(0,print_team_default,"^4[%s]^3 Rounds:^4 %d^3/^4%d ^1|^3 Score:^3 Ts:^4%i^3 -^3 CTs:^4%i ^1|^3 Map:^4 %s^3/^4%s ^3[^4No Round Limit^3] ^1|^3 Players:^4 %d^3/^4%d",prefix, runde,maxrundi,TerrScore,CTScore,mapname, nextmap, player,maxplayers);
     }
     else
     {
-    	client_print_color(0,print_team_default,"^4[%s]^3 Rounds:^4 %d^3/^4%d ^1|^3 Score:^3 Ts:^4%i^3 -^3 CTs:^4%i ^1|^3 Map:^4 %s^3/^4%s [%i] ^1|^3 Players:^4 %d^3/^4%d",prefix, runde,maxrundi,TerrScore,CTScore,mapname, nextmap,maxroundsCvar, player,maxplayers);
+    	client_print_color(0,print_team_default,"^4[%s]^3 Rounds:^4 %d^3/^4%d ^1|^3 Score:^3 Ts:^4%i^3 -^3 CTs:^4%i ^1|^3 Map:^4 %s^3/^4%s ^3[^4%i^3] ^1|^3 Players:^4 %d^3/^4%d",prefix, runde,maxrundi,TerrScore,CTScore,mapname, nextmap,maxroundsCvar, player,maxplayers);
     }
      
     runde++;
