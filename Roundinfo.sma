@@ -30,10 +30,7 @@ public ct_score()
 }
 public round_start() 
 { 
-    
-    
     new mapname[32], nextmap[32], players[32], player ,maxrundi, maxplayers,maxroundsCvar;
-    
     maxrundi=get_cvar_num("mp_maxrounds");
     maxplayers=get_maxplayers();
     get_cvar_string("amx_nextmap",nextmap,31); 
@@ -76,4 +73,4 @@ get_map_maxrounds(szMapname[])
         return iValue;
     }
     return PLUGIN_CONTINUE;
-} 
+}
